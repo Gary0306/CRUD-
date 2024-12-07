@@ -1,0 +1,10 @@
+{% extends "layout.html"%} {% block "content" %}
+{% csrf_token %}
+<h1>新增商品</h1>
+<form action="{% url "products:index"%}" method="POST">
+    {% csrf_token %} 
+    {{form.as_p}}
+    <button>新增</button>
+</form>
+
+{% endblock %}

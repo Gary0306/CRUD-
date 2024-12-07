@@ -1,0 +1,8 @@
+{% extends "layout.html"%} {% block "content" %} {% csrf_token %}
+<h1>確認刪除？</h1>
+<form method="POST">
+  {% csrf_token %}
+  <button>刪除</button>
+</form>
+
+{% endblock %}
